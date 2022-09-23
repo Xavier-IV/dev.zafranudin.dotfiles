@@ -3,11 +3,10 @@ A dotfiles that I commonly use. Will be update over the time.
 <br/>
 <br/>
 <img src="https://raw.githubusercontent.com/Xavier-IV/dev.zafranudin.dotfiles/master/_screenshot/screenshot.png" width="80%" />
-<br/>
-<br/>
+</p>
 
+<p align="center">
 For a Quickstart, head over to the [WikiPage](https://github.com/Xavier-IV/dev.zafranudin.dotfiles/wiki/01-%5C--Quickstart).
-
 </p>
 
 # Pre-Requisites
