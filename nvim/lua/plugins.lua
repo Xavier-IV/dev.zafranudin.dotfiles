@@ -20,4 +20,9 @@ return require('packer').startup(function(use)
   -- theme
   use 'navarasu/onedark.nvim'
 
+  -- development
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', }
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use { 'kyazdani42/nvim-web-devicons' }
 end)
