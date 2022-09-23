@@ -2,6 +2,8 @@
 
 A dotfiles that I commonly use. Will be update over the time.
 
+![screenshot](https://raw.githubusercontent.com/Xavier-IV/dev.zafranudin.dotfiles/master/_screenshot/screenshot.png)
+
 # Pre-Requisites
 
 - iterm2
