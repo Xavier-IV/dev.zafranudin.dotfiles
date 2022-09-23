@@ -18,6 +18,9 @@ For a Quickstart, head over to the [WikiPage](https://github.com/Xavier-IV/dev.z
 
 A powerful plugin for session management.
 
+**Plugin Manager** - https://github.com/tmux-plugins/tpm
+**Theme** - https://github.com/wfxr/tmux-power
+
 # NVim
 ## Packer + Utilities
 
