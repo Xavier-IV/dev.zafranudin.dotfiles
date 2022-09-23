@@ -1,9 +1,11 @@
 # About
 
+<center>
 A dotfiles that I commonly use. Will be update over the time.
 
-![screenshot](https://raw.githubusercontent.com/Xavier-IV/dev.zafranudin.dotfiles/master/_screenshot/screenshot.png)
+<img src="https://raw.githubusercontent.com/Xavier-IV/dev.zafranudin.dotfiles/master/_screenshot/screenshot.png" width="60%" />
 
+</center>
 # Pre-Requisites
 
 - iterm2
