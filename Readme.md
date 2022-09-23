@@ -9,6 +9,11 @@ A dotfiles that I commonly use. Will be update over the time.
 - neovim
 - oh-my-zsh
 - prettier
+- ripgrep
+
+```bash
+$ brew install iterm2 tmux neovim oh-my-zsh prettier ripgrep
+```
 
 # Packer + Utilities
 
@@ -27,10 +32,18 @@ OneDark - https://github.com/navarasu/onedark.nvim
 ## 2 - Development
 
 TreeSitter - https://github.com/nvim-treesitter/nvim-treesitter
+
 GitSigns - https://github.com/lewis6991/gitsigns.nvim
 
 ## 3 - Prettier + LSP
 
 LSP Config - https://github.com/neovim/nvim-lspconfig
+
 Null LS - https://github.com/jose-elias-alvarez/null-ls.nvim
+
 Prettier - https://github.com/MunifTanjim/prettier.nvim
+
+Telescope
+- telescope-file-browser.nvim
+- telescope-fzf-native.nvim
+- nvim-web-devicons
