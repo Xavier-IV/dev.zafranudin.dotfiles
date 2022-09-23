@@ -1,7 +1,9 @@
 return require('packer').startup(function(use)
-  -- Packer can manage itself
+  -- packer base dependencies
   use 'wbthomason/packer.nvim'
+  use 'neovim/nvim-lspconfig'
   use 'nvim-lua/plenary.nvim'
+  use { 'kyazdani42/nvim-web-devicons' }
 
   use {
         'nvim-treesitter/nvim-treesitter',
@@ -9,7 +11,6 @@ return require('packer').startup(function(use)
     }
   
   -- prettier
-  use 'neovim/nvim-lspconfig'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
 
@@ -20,9 +21,31 @@ return require('packer').startup(function(use)
   -- theme
   use 'navarasu/onedark.nvim'
 
+
   -- development
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', }
   use { 'nvim-telescope/telescope-file-browser.nvim' }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use { 'kyazdani42/nvim-web-devicons' }
+
+  -- lsp
+  use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'L3MON4D3/LuaSnip'
+
+  -- syntax helper
+  use {
+    "folke/trouble.nvim",
+    config = function() require("trouble").setup {} end
+  }
+
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+        local saga = require("lspsaga")
+        saga.init_lsp_saga({})
+    end,
+  })
 end)
