@@ -4,4 +4,9 @@
 
 local opt = vim.opt
 
-opt.relativenumber = false
+opt.relativenumber = true
+opt.mouse = ""
+opt.wrap = true
+opt.mousescroll = "ver:0,hor:0"
+
+vim.g.netrw_keepdir = 0
