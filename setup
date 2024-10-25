@@ -7,9 +7,9 @@ if ! command -v brew &>/dev/null; then
 fi
 
 # Install required packages
-packages=("stow" "iterm2" "tmux" "neovim" "prettier" "ripgrep")
+packages=("stow" "iterm2" "tmux" "wezterm" "neovim" "prettier" "ripgrep")
 
-echo "Installing packages: ${packages[*]}"
+echo ">> Installing packages: ${packages[*]}"
 for package in "${packages[@]}"; do
   if ! brew list "$package" &>/dev/null; then
     echo "Installing $package..."
@@ -21,24 +21,29 @@ done
 
 # Install Oh My Zsh if not already installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo "Installing Oh My Zsh..."
+  echo ">> Installing Oh My Zsh..."
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
   echo "Oh My Zsh already installed."
 fi
 
 # Clone TPM (Tmux Plugin Manager)
+rm -rf /tmp/tmux-*
 if [ ! -d "$HOME/.dotfiles/.config/tmux/plugins/tpm" ]; then
-  echo "Cloning Tmux Plugin Manager..."
+  echo ">> Cloning Tmux Plugin Manager..."
   git clone https://github.com/tmux-plugins/tpm ~/.dotfiles/.config/tmux/plugins/tpm
 else
   echo "Tmux Plugin Manager already cloned."
 fi
 
 # Run stow in the current directory
-echo "Running stow..."
-stow .config
+echo ">> Running stow..."
+stow -t ~/.config .config
+stow -t ~ zsh
 
 # Install Tmux plugins headlessly
-echo "Installing Tmux plugins..."
+echo ">> Installing Tmux plugins..."
+~/.dotfiles/.config/tmux/plugins/tpm/bin/clean_plugins
 ~/.dotfiles/.config/tmux/plugins/tpm/bin/install_plugins
+
+tmux source-file ~/.tmux.conf

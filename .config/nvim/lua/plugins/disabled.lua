@@ -1,6 +1,14 @@
 return {
+  -- {
+  --   "nvim-telescope/telescope.nvim",
+  --   enabled = false,
+  -- },
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --   enabled = false,
+  -- },
   {
-    "nvim-telescope/telescope.nvim",
+    "akinsho/bufferline.nvim",
     enabled = false,
   },
 }
