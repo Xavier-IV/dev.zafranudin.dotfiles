@@ -47,3 +47,19 @@ echo ">> Installing Tmux plugins..."
 ~/.dotfiles/.config/tmux/plugins/tpm/bin/install_plugins
 
 tmux source-file ~/.tmux.conf
+
+# Install Powerlevel10k (p10k) for Oh My Zsh
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
+  echo ">> Installing Powerlevel10k for Oh My Zsh..."
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+else
+  echo "Powerlevel10k is already installed."
+fi
+
+# Set p10k as the default Zsh theme in .zshrc
+if ! grep -q "ZSH_THEME=\"powerlevel10k/powerlevel10k\"" ~/.zshrc; then
+  echo ">> Setting Powerlevel10k as the default theme in .zshrc..."
+  sed -i '' 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
+else
+  echo "Powerlevel10k is already set as the theme in .zshrc."
+fi

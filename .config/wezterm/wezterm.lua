@@ -48,10 +48,10 @@ local config = {
 	},
 
 	window_padding = {
-		left = 20,
-		right = 20,
-		top = 30,
-		bottom = 10,
+		left = 30,
+		right = 30,
+		top = 40,
+		bottom = 30,
 	},
 
 	window_background_opacity = 1, -- Set to your desired level of transparency
