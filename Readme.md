@@ -7,7 +7,11 @@ A dotfiles that I commonly use. Will be update over the time.
 
 <p align="center">
 
-For a Quickstart, head over to the [WikiPage](https://github.com/Xavier-IV/dev.zafranudin.dotfiles/wiki/01-%5C--Quickstart).
+For a Quickstart:
+
+```
+./setup
+```
 
 </p>
 
@@ -20,13 +24,12 @@ For a Quickstart, head over to the [WikiPage](https://github.com/Xavier-IV/dev.z
 - prettier
 - ripgrep
 
-
 # Tmux
 
 A powerful plugin for session management.
 
-**Plugin Manager** - https://github.com/tmux-plugins/tpm
-**Theme** - https://github.com/wfxr/tmux-power
+**Plugin Manager** - <https://github.com/tmux-plugins/tpm>
+**Theme** - <https://github.com/wfxr/tmux-power>
 
 # NVim
 

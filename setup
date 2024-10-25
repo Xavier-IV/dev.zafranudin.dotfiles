@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Install Homebrew if not installed
+if ! command -v brew &>/dev/null; then
+  echo "Homebrew not found. Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Install required packages
+packages=("stow" "iterm2" "tmux" "neovim" "prettier" "ripgrep")
+
+echo "Installing packages: ${packages[*]}"
+for package in "${packages[@]}"; do
+  if ! brew list "$package" &>/dev/null; then
+    echo "Installing $package..."
+    brew install "$package"
+  else
+    echo "$package is already installed."
+  fi
+done
+
+# Install Oh My Zsh if not already installed
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "Installing Oh My Zsh..."
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+  echo "Oh My Zsh already installed."
+fi
+
+# Clone TPM (Tmux Plugin Manager)
+if [ ! -d "$HOME/.dotfiles/.config/tmux/plugins/tpm" ]; then
+  echo "Cloning Tmux Plugin Manager..."
+  git clone https://github.com/tmux-plugins/tpm ~/.dotfiles/.config/tmux/plugins/tpm
+else
+  echo "Tmux Plugin Manager already cloned."
+fi
+
+# Run stow in the current directory
+echo "Running stow..."
+stow .config
+
+# Install Tmux plugins headlessly
+echo "Installing Tmux plugins..."
+~/.dotfiles/.config/tmux/plugins/tpm/bin/install_plugins
