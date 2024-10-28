@@ -9,7 +9,7 @@ local config = {
 	color_scheme = "deep",
 
 	-- You can also set other color schemes or additional settings here
-	window_decorations = "RESIZE",
+	window_decorations = "INTEGRATED_BUTTONS | RESIZE",
 
 	-- Adjust tab bar style and add padding
 	tab_bar_at_bottom = false, -- Change to true if you want the tab bar at the bottom
@@ -50,7 +50,7 @@ local config = {
 	window_padding = {
 		left = 30,
 		right = 30,
-		top = 40,
+		top = 70,
 		bottom = 30,
 	},
 
