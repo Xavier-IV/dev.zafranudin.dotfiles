@@ -3,9 +3,10 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
-        position = "float",
+        position = "left",
       },
       filesystem = {
+        follow_current_file = true, -- Focus on the current file in Neo-tree
         filtered_items = {
           visible = false,
           show_hidden_count = true,
