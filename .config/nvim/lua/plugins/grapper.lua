@@ -5,6 +5,8 @@ return {
   },
   opts = {
     scope = "git", -- also try out "git_branch"
+    virtual_text = true,
+    virtual_text_prefix = "🔖 ",
   },
   event = { "BufReadPost", "BufNewFile" },
   cmd = "Grapple",
