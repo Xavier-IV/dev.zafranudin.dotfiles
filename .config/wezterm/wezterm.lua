@@ -83,7 +83,7 @@ local config = {
 	window_padding = {
 		left = 30,
 		right = 30,
-		top = 40,
+		top = 60,
 		bottom = 30,
 	},
 
