@@ -1,2 +1,4 @@
 .config/tmux/plugins/*
 !.config/tmux/plugins/.keep
+
+.DS_Store
