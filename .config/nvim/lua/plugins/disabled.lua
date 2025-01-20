@@ -11,4 +11,10 @@ return {
     "akinsho/bufferline.nvim",
     enabled = false,
   },
+  {
+    "github/copilot.vim",
+    enabled = false,
+  },
+  { "zbirenbaum/copilot.lua", enabled = false },
+  { "zbirenbaum/copilot-cmp", enabled = false },
 }
